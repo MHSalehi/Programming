@@ -21,4 +21,4 @@ if playernum <= 100:
 elif playernum <= 1000:
     print ("That's a small number!")
 else:
-    print ("That's and adequately huge number!")
+    print ("That's an adequately huge number!")
