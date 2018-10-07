@@ -4,7 +4,23 @@ print ("Hello, Python!")
 spch = "Greetings!"
 print (spch + " What is your name?")
 
+#Class Task 1
+print ("\n")
+g = 14
+t = 0.12
+tg = g+g*t
+print ("£ " + str(tg))
+
+#Class Task 2
+print ("\n")
+fg = 20
+s = 0.4
+#Calculate sale price to 2 d.p.
+sg = '{:.2f}'.format(fg-fg*s)
+print ("£ " + str(sg))
+
 #Practicing with .upper() and .lower() functions
+print ("\n")
 t = "Barry ProgrammeR"
 print (t[-3].upper() + t[-2] + t[2:5] + (" ") + t[7].upper() + t[8] + t[-5:-3] + t[-2] + t[-1].lower())
 
@@ -59,7 +75,7 @@ elif age >= 15:
 else:
     print("Just getting started.")
 
-#Conditional Class Task 3
+#Class Task 3
 print("\n")
 playernum = int(input("Choose a number: "))
 if playernum <= 100:
@@ -67,7 +83,7 @@ if playernum <= 100:
 elif playernum <= 1000:
     print ("That's an adequately huge number!")
 
-#Conditional Class Task 4
+#Class Task 4
 n = playernum % 2
 if n == 0:
     print ("This an even number.")
