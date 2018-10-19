@@ -20,7 +20,7 @@ for l in word:
 
 print()
 
-'''
+###
 
 listLength = 0
 LucasFoods = []
@@ -38,7 +38,18 @@ changeList = input("Do you wish to change an item Y/N? ")
 #     continue
 if changeList in ["Y", "y", "yes"]:
     changeItem = input("Which food do you want to replace?" )
+    #Search for unwanted food in list
     for food in LucasFoods:
-        changeNumber = find(str.changeItem)
-    replaceItem = input("What do you want to replace it with? ")
-    LucasFoods[changeNumber] = replaceItem
+        if food == changeItem:
+            replaceItem = input("What do you want to replace it with? ")
+            LucasFoods[int(food)] = replaceItem
+print(*LucasFoods)
+
+'''
+
+count = 0
+symbol = ["*"]
+while count < 11:
+    print(*symbol)
+    symbol.append("*")
+    count += 1
