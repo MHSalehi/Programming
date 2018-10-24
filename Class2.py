@@ -26,25 +26,25 @@
 listLength = 0
 LucasFoods = []
 
-while len(LucasFoods) <=4:
+while len(LucasFoods) <=2:
     userFood = input("\nEnter a food: ")
     LucasFoods.append(userFood)
     print("\nCurrent food list:\r", *LucasFoods, sep = "\n")
     continue
 else:
-    print("\n That's enough food items.")
+    print("\nThat's enough food items.")
 
 changeList = input("Do you wish to change an item Y/N? ")
-# if changeList == N:
-#     continue
 if changeList in ["Y", "y", "yes"]:
-    changeItem = input("Which food do you want to replace?" )
-    #Search for unwanted food in list
+    changeItem = input("Which food do you want to replace? ")
+# Search for unwanted food in list
     for food in LucasFoods:
         if food == changeItem:
-            replaceItem = input("What do you want to replace it with? ")
-            LucasFoods[int(food)] = replaceItem
-print(*LucasFoods)
+            newItem = input("What do you want to replace it with? ")
+            LucasFoods[LucasFoods.index(changeItem)] = newItem
+    print("\nAmended food list:\r", *LucasFoods, sep="\n")
+else:
+    print("\nFinal food list:\r", *LucasFoods, sep="\n")
 
 
 
