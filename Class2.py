@@ -1,34 +1,35 @@
-'''
-while  count < 3
-    print (count)
+# count = 0
+# while  count < 9:
+#     print (count)
+#
+#     if count == 15:
+#         print ("Target reached.")
+#         break
+#     else:
+#         print ("Counting up...")
+#         count += 1
+#         continue
 
-    if count == 15:
-        print ("Target reached.")
-        breakaasdasfdssd
-    else:
-        print ("Counting up...")
-        count += 1
-        continue
 
 
-word = "python"
+# word = "python"
+#
+# for l in word:
+#     if l == "t":
+#         continue
+#     print(l, end='')
+#
+# print()
 
-for l in word:
-    if l == "t":
-        continue
-    print(l, end='')
 
-print()
-
-###
 
 listLength = 0
 LucasFoods = []
 
 while len(LucasFoods) <=4:
-    userFood = input("\n Enter a food: ")
+    userFood = input("\nEnter a food: ")
     LucasFoods.append(userFood)
-    print(*LucasFoods, sep = "\n")
+    print("\nCurrent food list:\r", *LucasFoods, sep = "\n")
     continue
 else:
     print("\n That's enough food items.")
@@ -45,11 +46,11 @@ if changeList in ["Y", "y", "yes"]:
             LucasFoods[int(food)] = replaceItem
 print(*LucasFoods)
 
-'''
 
-count = 0
-symbol = ["*"]
-while count < 11:
-    print(*symbol)
-    symbol.append("*")
-    count += 1
+
+# count = 0
+# symbol = ["*"]
+# while count < 11:
+#     print(*symbol)
+#     symbol.append("*")
+#     count += 1
