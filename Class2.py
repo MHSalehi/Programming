@@ -35,17 +35,24 @@ else:
     print("\nThat's enough food items.")
 
 changeList = input("Do you wish to change an item Y/N? ")
-if changeList in ["Y", "y", "yes"]:
-    changeItem = input("Which food do you want to replace? ")
+if changeList in ["Y", "y", "yes", "Yes"]:
+    while True:
+        changeItem = input("Which food do you want to replace? ")
+        if changeItem not in LucasFoods:
+            print("That isn't on the list. please try again.")
+        else:
+            break
 # Search for unwanted food in list
-    for food in LucasFoods:
-        if food == changeItem:
-            newItem = input("What do you want to replace it with? ")
-            LucasFoods[LucasFoods.index(changeItem)] = newItem
-    print("\nAmended food list:\r", *LucasFoods, sep="\n")
+for food in LucasFoods:
+    if food == changeItem:
+        newItem = input("What do you want to replace it with? ")
+        LucasFoods[LucasFoods.index(changeItem)] = newItem
+
+
 else:
     print("\nFinal food list:\r", *LucasFoods, sep="\n")
 
+# if changeItem
 
 
 # count = 0
