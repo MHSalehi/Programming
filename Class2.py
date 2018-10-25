@@ -26,7 +26,7 @@
 listLength = 0
 LucasFoods = []
 
-while len(LucasFoods) <=2:
+while len(LucasFoods) <=3:
     userFood = input("\nEnter a food: ")
     LucasFoods.append(userFood)
     print("\nCurrent food list:\r", *LucasFoods, sep = "\n")
@@ -34,10 +34,11 @@ while len(LucasFoods) <=2:
 else:
     print("\nThat's enough food items.")
 
+# Query final list
 changeList = input("Do you wish to change an item Y/N? ")
 if changeList in ["Y", "y", "yes", "Yes"]:
     while True:
-        changeItem = input("Which food do you want to replace? ")
+        changeItem = input("Which item do you want to change? ")
         if changeItem not in LucasFoods:
             print("That isn't on the list. please try again.")
         else:
@@ -45,12 +46,21 @@ if changeList in ["Y", "y", "yes", "Yes"]:
 # Search for unwanted food in list
 for food in LucasFoods:
     if food == changeItem:
-        newItem = input("What do you want to replace it with? ")
-        LucasFoods[LucasFoods.index(changeItem)] = newItem
+# Delete item/replace?
+        while True:
+            itemQuery = input("Do you wish to remove or replace the item? ")
+            if itemQuery not in ["Remove", "remove", "Replace", "replace"]:
+                print("Invalid response. Please try again. ")
+            else:
+                break
+if itemQuery in ["Remove", "remove"]:
+    LucasFoods.remove(changeItem)
+if  itemQuery in ["Replace", "replace"]:
+    newItem = input("What do you want to replace it with? ")
+    LucasFoods[LucasFoods.index(changeItem)] = newItem
 
-
-else:
-    print("\nFinal food list:\r", *LucasFoods, sep="\n")
+# Print final list
+print("\nFinal food list:\r", *LucasFoods, sep="\n")
 
 # if changeItem
 
