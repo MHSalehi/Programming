@@ -35,7 +35,12 @@ else:
     print("\nThat's enough food items.")
 
 # Query final list
-changeList = input("Do you wish to change an item Y/N? ")
+while True:
+    changeList = input("Do you wish to change an item Y/N? ")
+    if changeList not in ["Y", "y", "yes", "Yes", "N", "n", "no", "No"]:
+        print("That isn't on the list. please try again.")
+    else:
+        break
 if changeList in ["Y", "y", "yes", "Yes"]:
     while True:
         changeItem = input("Which item do you want to change? ")
@@ -43,21 +48,21 @@ if changeList in ["Y", "y", "yes", "Yes"]:
             print("That isn't on the list. please try again.")
         else:
             break
-# Search for unwanted food in list
-for food in LucasFoods:
-    if food == changeItem:
-# Delete item/replace?
-        while True:
-            itemQuery = input("Do you wish to remove or replace the item? ")
-            if itemQuery not in ["Remove", "remove", "Replace", "replace"]:
-                print("Invalid response. Please try again. ")
-            else:
-                break
-if itemQuery in ["Remove", "remove"]:
-    LucasFoods.remove(changeItem)
-if  itemQuery in ["Replace", "replace"]:
-    newItem = input("What do you want to replace it with? ")
-    LucasFoods[LucasFoods.index(changeItem)] = newItem
+    # Search for unwanted food in list
+    for food in LucasFoods:
+        if food == changeItem:
+    # Delete item/replace?
+            while True:
+                itemQuery = input("Do you wish to remove or replace the item? ")
+                if itemQuery not in ["Remove", "remove", "Replace", "replace"]:
+                    print("Invalid response. Please try again. ")
+                else:
+                    break
+    if itemQuery in ["Remove", "remove"]:
+        LucasFoods.remove(changeItem)
+    if  itemQuery in ["Replace", "replace"]:
+        newItem = input("What do you want to replace it with? ")
+        LucasFoods[LucasFoods.index(changeItem)] = newItem
 
 # Print final list
 print("\nFinal food list:\r", *LucasFoods, sep="\n")
