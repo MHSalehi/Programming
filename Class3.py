@@ -12,6 +12,7 @@
 # print(*(sorted(newList_a)+sorted(newList_b)))
 
 
+#------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # numbers = [2, 3, 5, 7, 66 , 89, 134]
@@ -25,7 +26,7 @@
 #
 # print(newList)
 
-# Print list interspaced with "*" symbols   #### needs to convert to string first
+# Print list interspaced with "*" symbols   #### needs to convert to string first!
 # a = [x**2 for x in range(5)]
 # b = "*".join(a)
 # print(b)
@@ -40,6 +41,9 @@
 #     #if len(i) != 0 and i != " ":
 #     #    tupleList_B.append(i)
 # print(tupleList_B)
+
+
+#------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 #Dictionaries
@@ -59,9 +63,15 @@
 # print (my_Dict.values())
 
 
-# Exercise Script Dictionary
+#------------------------------------------------------------------------------------------------------------------------------------------------
 
-scriptDict = {}
-for i in range(1,16):
-    scriptDict[i] = i**2
-print(*scriptDict.items())
+
+# # Exercise Script Dictionary
+#
+# scriptDict = {}
+# for i in range(1,16):
+#     scriptDict[i] = i**2
+# print(*scriptDict.items())
+
+
+#------------------------------------------------------------------------------------------------------------------------------------------------
