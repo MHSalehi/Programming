@@ -1,26 +1,25 @@
-'''while True:
-    try:
-        x = int(input("Please enter a number: "))
-        break
-    except ValueError:
-        print("Oops!  That was no valid number.  Try again...")
-'''
-'''
-print ("1 2 or 3")
-while True:
-    choice = (input("Choice: "))
-    try:
-        if choice.isdigit() == True:
-            break
-        # ValueError:
-        #    print ("That isn't a valid choice.")
-        #    continue
-    except choice.isalpha() == True:
-        print ("Repeat.")
-        continue
+# while True:
+#     try:
+#         x = int(input("Please enter a number: "))
+#         break
+#     except ValueError:
+#         print("Oops!  That was no valid number.  Try again...")
+#
+# print ("1 2 or 3")
+# while True:
+#     choice = (input("Choice: "))
+#     try:
+#         if choice.isdigit() == True:
+#             break
+#         # ValueError:
+#         #    print ("That isn't a valid choice.")
+#         #    continue
+#     except choice.isalpha() == True:
+#         print ("Repeat.")
+#         continue
+#
+# and choice != 0:
 
- #and choice != 0:
-'''
 
 # Defining Choice Checker Function
 
@@ -37,10 +36,6 @@ while True:
     else:
         break
 
-# if choice == str("1"):
-#     arrayLength = len(arr1)
-# if choice == str("2"):
-#     arrayLength = len(arr2)
 if choice == str("1"):
     activeArray = playerInv
 if choice == str("2"):
@@ -52,6 +47,3 @@ selectItem = input("\nSelect a list item: ")
 if len(activeArray) < len(selectItem) and selectItem != 0:
     print(activeArray)
 
-# choice = input("Choice? ")
-# choice_check(choice)
-# print ("Passed.")
