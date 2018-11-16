@@ -32,7 +32,7 @@ allowedItems = ["Daggers", "BluePotions" ,"GoldenFeathers", "Manuscripts"]
 
 while True:
     while True:
-        userInput = input ("Which direction to travel (n,s,e,w)?").lower()
+        userInput = input ("\nWhich direction to travel (n,s,e,w)?").lower()
         if userInput not in ["n","s","e","w"]:
             print("You can't go that way.")
             continue
@@ -40,11 +40,11 @@ while True:
             break
     randomItem = items[(random.randint (0,len(items)-1))]
     if randomItem not in ["Twig", "Bag of holding", "Sack of gold"]:
-        print("You find " + str(randomItem))
+        print("\nYou find " + str(randomItem))
     elif randomItem  in ["Elixir"]:
-        print("You find an " + str(randomItem))
+        print("\nYou find an " + str(randomItem))
     else:
-        print("You find a " + str(randomItem))
+        print("\nYou find a " + str(randomItem))
 
 
     if randomItem not in allowedItems:
@@ -54,28 +54,32 @@ while True:
     else:
         userInput = input("Do you wish to pick it up? ").lower()
         if userInput in ["y", "yes", "yeah"]:
-            print("You stash it in your inventory.")
+            print("\nYou stash it in your inventory.")
             for key, value in invPlayer.items():
                 if key == randomItem:
-                #    key: value += 1
                     invPlayer[key] += 1
-                    print(invPlayer + "\t")
+
+# Print player inventory -----------------------------------------------------------------------------------------------
+                    print("\n===== Player inventory: =====")
+                    for k, v in invPlayer.items():  # to access the values of the nested dictionary (details is your second dictionary so you can do details.items())
+                        print(k + "\t", v)
+
             if randomItem in ["BluePotions"]:
-                if StealthAbility <= 5:
+                if StealthAbility < 5:
                     StealthAbility += 1
-                    print("Your stealth ability has increased by +1.")
+                    print("\nYour stealth ability has increased by +1.")
                     print("Stealth ability: " + str(StealthAbility))
                 else:
-                    print("Your stealth ability is already maxed.")
+                    print("\nYour stealth ability is already maxed.")
                     print("Stealth ability: " + str(StealthAbility))
 
             if randomItem in ["GoldenFeathers"]:
-                if FlyAbility <= 5:
+                if FlyAbility < 5:
                     FlyAbility += 1
-                    print("Your fly ability has increased by +1.")
+                    print("\nYour fly ability has increased by +1.")
                     print("Fly ability: " + str(FlyAbility))
                 else:
-                    print("Your fly ability is already maxed.")
+                    print("\nYour fly ability is already maxed.")
                     print("Fly ability: " + str(FlyAbility))
         else:
-            print("You toss it aside.")
+            print("\nYou toss it aside.")
