@@ -65,13 +65,13 @@ if userChoice == str(2):       # Is this check needed??     - was thinking about
 
 if userChoice == str(2):   ########  WHY NOT USE 'if userChoice == str("1') directly and not do the previous if check? Why do you take an extra step to check?
     print("\n===== Chest Contents: =====")
-    for category, details in invChest01.items():
+    for category, article in invChest01.items():
         if category == "Weapons":               #### Not sure what you want to do here but giving some extra hints about presentation of dict items below:
-            for weapon,det in details.items():  # to access the values of the nested dictionary (details is your second dictionary so you can do details.items())
+            for weapon, det in article.items():  # to access the values of the nested dictionary (details is your second dictionary so you can do details.items())
                 print(weapon + "\t", det)
             # print(category + "\t"*2, details)       # Better method to align items + quantities to their own columns?
         else:
-            for weapon,det in details.items():  # to access the values of the nested dictionary (details is your second dictionary so you can do details.items())
+            for weapon, det in details.items():  # to access the values of the nested dictionary (details is your second dictionary so you can do details.items())
                 print(weapon + "\t", det)       
              
 
