@@ -58,12 +58,23 @@
 # # 2.
 # from operator import itemgetter
 # print(*itemgetter(1, 2, 3)(a_list))
+print(a_list[1:])
+
 #
 # # 3.
 # print(itemgetter(3, 2, 1, 0)(a_list))
+a_list.reverse()
+print(a_list)
+
 #
 # # 4.
 # print(a_list[0]**2, a_list[0]*a_list[1], a_list[0]*a_list[2], a_list[0]*a_list[3])
+
+b = []
+
+for i in a_list:
+  b.append(i*3)
+print(b)
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Comment: For the above, is there another way to achieve this w/o repeating, "a_list[i]" repeatedly?               X
@@ -100,6 +111,23 @@
 #         userOddNumbers.append(i)
 #
 # print("\nYour odd numbers: ",*userOddNumbers)
+
+####No need to use regular expressions.
+
+usr = input()
+
+l = []
+new = []
+
+s = usr.replace(" ", "")   # Removes whitespace by replacing space with empty string ;)
+for c in s:
+  l.append(int(c))
+
+for i in l:
+ 	if i%2 == 0:
+ 		new.append(i)
+
+print("New list:", new)
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Comment: Seeing one extra space on the line 231 print function after, "Your odd numbers:__" <- here.              X
